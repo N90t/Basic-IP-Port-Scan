@@ -3,9 +3,15 @@
 import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.settimeout(5)    #Helps in getting response faster
 
-host = "IPADDRESS"
-port = 80 
+#You can embeed speicific ipaddress & port if you want check at specific intervals.
+#host = "IPADDRESS"
+#port = 80 
+
+#Here, given an option to provide an input which is feasible.
+host = input("Enter IP you want to scan")
+port = int(input("Enter port you want to scan")
 
 def portscanner(port):
     if s.connect_ex((host,port)):
