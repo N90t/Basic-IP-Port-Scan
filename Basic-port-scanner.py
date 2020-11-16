@@ -3,7 +3,7 @@
 import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.settimeout(5)    #Helps in getting response faster
+s.settimeout(5)    #Setting timeout helps in getting response faster
 
 #You can embed speicific ipaddress & port if you want check at specific intervals.
 #host = "IPADDRESS"
